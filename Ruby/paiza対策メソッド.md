@@ -50,11 +50,19 @@ while line = gets
 
 end
 
+# countメソッド
+
+要素の数を数える
+
+'abcdefg'.**count**('c')
+
+=> 1
+
 # 置換メソッド
 
-・置換対象の文字列のうち、最初に出現するものを置き換える
-
 ## sub()メソッド
+
+・置換対象の文字列のうち、最初に出現するものを置き換える
 
 article = "This is an apple. The apple is very delicious. Do you like this apple?"
 
@@ -62,7 +70,7 @@ article_replaced_1 = article.sub("apple", "orange")
 
 p article_replaced_1 # "This is an orange. The apple is very delicious. Do you like this apple?"
 
-※最初の「apple」のみが「orange」に置き換わる
+※最初の「apple」のみが「orange」に置き換わる。
 
 ## gsub()メソッド
 
