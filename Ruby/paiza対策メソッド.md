@@ -18,7 +18,7 @@ input = gets.chomp.to_i
 
 # 配列メソッド
 
-・入力値を配列に格納　　※数値　
+・入力値を配列に格納　　※map &:to_iで、数値に変換している　
 
 input = gets.split.map(&:to_i)
 
@@ -91,3 +91,11 @@ replaced = article.gsub(/rock|soccer/, pattern)
 p replaced # "I like travel, J-pop and baseball."
 
 ※置換処理パターンをハッシュで定義し、引数に渡すことで、一括処理ができる
+
+# 削除メソッド
+
+## gsubでの削除
+
+※ハイフンを空白にして、削除している
+
+input = gets.gsub("-", "")
