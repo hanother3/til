@@ -99,3 +99,23 @@ p replaced # "I like travel, J-pop and baseball."
 ※ハイフンを空白にして、削除している
 
 input = gets.gsub("-", "")
+
+## delete メソッド
+
+※文字列から、指定の文字列を削除する
+
+str = "abcdaaefaagh"
+
+str.delete("a")
+
+=> "bcdefgh"
+
+## sliceメソッド
+
+※文字列から、開始位置と取得文字数を指定して取り出す
+
+str = "0123456789"
+
+str.slice(3, 5)
+
+=> "34567"
