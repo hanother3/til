@@ -119,3 +119,41 @@ str = "0123456789"
 str.slice(3, 5)
 
 => "34567"
+
+# timesメソッド
+
+3.times **do** |num|
+
+　p num
+
+end
+
+※num は 0から
+
+# timesメソッド + 配列
+
+//繰り返し回数
+n = 5
+//配列の設定
+sample = []
+
+//繰り返し回数分、配列に格納
+n.times do
+  sample.push(gets.chomp.split(" ").map &:to_i)
+end
+
+## returnの注意点
+
+※トップレベルで return した場合はプログラムが終了する。
+
+※トップレベルとは、そのファイルの一番上のスコープのこと。
+
+//ここのこと
+ 
+def hoge
+
+    //ここではない
+
+end
+ 
+//ここのこと
