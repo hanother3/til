@@ -30,6 +30,23 @@ puts 'hello'
 
 p 'hello'
 
+# splitメソッド
+
+・文字列を指定した区切り文字で分割し、配列で返す
+
+"Tokyo:Saitama:Okinawa".split(':')
+
+=> ["Tokyo", "Saitama", "Okinawa"]
+
+
+・1バイトの空白文字を指定することも出来る
+
+※この場合、改行(\n)、タブ(\t)も対象となる
+
+" abc def g ".split(' ')
+
+=> ["abc", "def", "g"]
+
 # 配列メソッド
 
 ・入力値を配列に格納　　※map &:to_iで、数値に変換している　
