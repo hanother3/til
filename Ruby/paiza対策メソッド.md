@@ -16,6 +16,20 @@ input = gets.to_i
 
 input = gets.chomp.to_i
 
+# 出力メソッド
+
+・改行なしで出力
+
+print 'hello'
+
+・改行ありで出力
+
+puts 'hello' 
+
+・デバッグ用出力（データ形式がわかる）
+
+p 'hello'
+
 # 配列メソッド
 
 ・入力値を配列に格納　　※map &:to_iで、数値に変換している　
@@ -139,7 +153,9 @@ sample = []
 
 //繰り返し回数分、配列に格納
 n.times do
-  sample.push(gets.chomp.split(" ").map &:to_i)
+
+  sample.push(gets.chomp.map &:to_i)
+
 end
 
 ## returnの注意点
