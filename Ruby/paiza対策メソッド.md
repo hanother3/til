@@ -153,7 +153,7 @@ str.slice(3, 5)
 
 # timesメソッド
 
-3.times **do** |num|
+3.times do |num|
 
 　p num
 
@@ -190,3 +190,22 @@ def hoge
 end
  
 //ここのこと
+
+# eachメソッド + 配列
+
+```ruby
+//入力値取得
+sample = readlines.map &:to_i
+
+//変数宣言
+n = 5
+
+//eachメソッド
+sample.each do |i|
+ if n < 10
+    n += 1
+ else    
+    puts "sample"
+ end
+end
+```
