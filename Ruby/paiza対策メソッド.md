@@ -195,3 +195,15 @@ sample.each do |i|
   end
 end
 ```
+
+# selectメソッド + 配列
+
+配列、ハッシュから、ある条件を満たす要素だけを取り出す。
+
+```ruby
+配列.select do |x|
+
+  条件
+
+end
+```
