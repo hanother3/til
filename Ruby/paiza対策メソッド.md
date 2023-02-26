@@ -42,13 +42,13 @@ p 'hello'
 ```ruby
 //文字列を指定した区切り文字で分割し、配列で返す
 "Tokyo:Saitama:Okinawa".split(':')
-=> ["Tokyo", "Saitama", "Okinawa"]
+#=> ["Tokyo", "Saitama", "Okinawa"]
 ```
 ```ruby
 //1バイトの空白文字を指定することも出来る
 ※この場合、改行(\n)、タブ(\t)も対象となる
 " abc def g ".split(' ')
-=> ["abc", "def", "g"]
+#=> ["abc", "def", "g"]
 ```
 
 # 配列メソッド
@@ -83,7 +83,7 @@ end
 ```ruby
 要素の数を数える
 'abcdefg'.**count**('c')
-=> 1
+#=> 1
 ```
 
 # selectメソッド + 配列
@@ -91,12 +91,25 @@ end
 配列、ハッシュから、ある条件を満たす要素だけを取り出す。
 
 ```ruby
-配列.select do |x|
-
-  条件
-
+list = [1, 2, 3, 4, 5]
+ 
+list_new = list.select do |x|
+  x > 3
 end
+ 
+p list_new
+#=> [4, 5]
 ```
+```ruby
+list =  ["yamamoto", "tanaka", "oyama", "yano"]
+ 
+list_new = list.select {|x| x.include?("yama")}
+ 
+p list_new
+#=>["yamamoto", "oyama"]
+```
+
+
 
 # 配列に指定した要素が存在するか確認する
 ## include?
@@ -104,7 +117,7 @@ end
 ```ruby
 fruits = ["apple", "orange", "melon"]
 puts fruits.include?("mel")
-=> false
+#=> false
 ```
 
 # 配列の最初と最後の要素を取得
@@ -114,7 +127,7 @@ puts fruits.include?("mel")
 ```ruby
 name = ["taro", "hanako", "ichiro", "jiro"]
 p name.first
-=> "taro"
+#=> "taro"
 ```
 ## lastメソッド
 配列の最後の要素を取得
@@ -122,7 +135,7 @@ p name.first
 ```ruby
 fruits = ["apple", "orange", "melon", "banana", "pineapple"]
 p fruits.last
-=> "pineapple"
+#=> "pineapple"
 ```
 
 # 置換メソッド
@@ -166,7 +179,7 @@ input = gets.gsub("-", "")
 //文字列から、指定の文字列を削除する
 str = "abcdaaefaagh"
 str.delete("a")
-=> "bcdefgh"
+#=> "bcdefgh"
 ```
 
 ## sliceメソッド
@@ -175,7 +188,7 @@ str.delete("a")
 //文字列から、開始位置と取得文字数を指定して取り出す
 str = "0123456789"
 str.slice(3, 5)
-=> "34567"
+#=> "34567"
 ```
 
 # timesメソッド
@@ -208,11 +221,9 @@ end
 ※トップレベルとは、そのファイルの一番上のスコープのこと。
 
 //ここのこと
-
 def hoge
     //ここではない
 end
- 
 //ここのこと
 ```
 
@@ -239,5 +250,5 @@ end
 少数点の計算
 ```ruby
 num.to_f / 3
-=> 0.3333333333333333
+#=> 0.3333333333333333
 ```
