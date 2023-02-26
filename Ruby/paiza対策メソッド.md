@@ -98,6 +98,15 @@ end
 end
 ```
 
+# 配列に指定した要素が存在するか確認する
+## include?
+
+```ruby
+fruits = ["apple", "orange", "melon"]
+puts fruits.include?("mel")
+=> false
+```
+
 # 配列の最初と最後の要素を取得
 ## firstメソッド
 配列の最初の要素を取得
