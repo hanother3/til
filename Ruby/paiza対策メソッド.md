@@ -86,6 +86,36 @@ end
 => 1
 ```
 
+# selectメソッド + 配列
+
+配列、ハッシュから、ある条件を満たす要素だけを取り出す。
+
+```ruby
+配列.select do |x|
+
+  条件
+
+end
+```
+
+# 配列の最初と最後の要素を取得
+## firstメソッド
+配列の最初の要素を取得
+
+```ruby
+name = ["taro", "hanako", "ichiro", "jiro"]
+p name.first
+=> "taro"
+```
+## lastメソッド
+配列の最後の要素を取得
+
+```ruby
+fruits = ["apple", "orange", "melon", "banana", "pineapple"]
+p fruits.last
+=> "pineapple"
+```
+
 # 置換メソッド
 ## sub()メソッド
 
@@ -195,19 +225,6 @@ sample.each do |i|
   end
 end
 ```
-
-# selectメソッド + 配列
-
-配列、ハッシュから、ある条件を満たす要素だけを取り出す。
-
-```ruby
-配列.select do |x|
-
-  条件
-
-end
-```
-
 # その他
 
 少数点の計算
