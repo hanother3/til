@@ -50,6 +50,24 @@ p 'hello'
 #=> ["abc", "def", "g"]
 ```
 
+# mapメソッド
+
+配列の要素の数だけブロック内で処理を繰り返し、新しい配列を返す
+```ruby
+# 通常の書き方
+["RUBY", "PHP", "JAVA"].map { |s| s.downcase }
+#=> ['ruby', 'php', 'java']
+
+# 省略した書き方
+["RUBY", "PHP", "JAVA"].map(&:downcase)
+#=> ["ruby", "php", "java"]
+
+# 実行する処理が複数行に渡る場合
+配列.map do |変数|
+  実行する処理
+end
+```
+
 # 配列メソッド
 ```ruby
 //入力値を配列に格納　　※map &:to_iで、数値に変換している　
