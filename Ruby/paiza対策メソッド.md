@@ -108,8 +108,7 @@ end
 配列、ハッシュから、ある条件を満たす要素だけを取り出す。
 
 ```ruby
-list = [1, 2, 3, 4, 5]
- 
+list = [1, 2, 3, 4, 5] 
 list_new = list.select do |x|
   x > 3
 end
@@ -119,14 +118,11 @@ p list_new
 ```
 ```ruby
 list =  ["yamamoto", "tanaka", "oyama", "yano"]
- 
 list_new = list.select {|x| x.include?("yama")}
  
 p list_new
 #=>["yamamoto", "oyama"]
 ```
-
-
 
 # 配列に指定した要素が存在するか確認する
 ## include?
@@ -298,3 +294,17 @@ puts sample.max (min)
 ```ruby
 n = 5
 sample = n.abs
+```
+
+文字列を大文字⇔小文字に変換
+
+```ruby
+str = "Hello World"
+puts str.downcase
+#=> hello world
+```
+```ruby
+str = "Hello World"
+puts str.upcase
+#=> HELLO WORLD
+```
