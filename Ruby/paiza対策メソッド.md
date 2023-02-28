@@ -315,3 +315,18 @@ str = "Hello World"
 puts str.upcase
 #=> HELLO WORLD
 ```
+
+昇順でソート
+```ruby
+array = [300, 200, 150, 400, 100]
+p array.sort
+#=> [100, 150, 200, 300, 400]
+```
+
+降順でソート
+```ruby
+array = [300, 200, 150, 400, 100]
+p array.sort.reverse
+=> [400, 300, 200, 150, 100]
+```
+
