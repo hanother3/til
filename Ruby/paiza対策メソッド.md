@@ -275,9 +275,11 @@ num.to_f / 3
 
 範囲オブジェクト
 ```ruby
-range = 1..10
-p range
-#=> 1..10
+range = [1, 2, 3, 4, 5]
+puts range[1..3]
+#=> 2
+#=> 3
+#=> 4
 ```
 範囲オブジェクト + each
 ```ruby
