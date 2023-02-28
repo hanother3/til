@@ -49,6 +49,13 @@ p 'hello'
 " abc def g ".split(' ')
 #=> ["abc", "def", "g"]
 ```
+("")を使って、１文字ずつ分割する
+```ruby
+str = "123456"
+array = str.split("")
+p array
+#=> ["1", "2", "3", "4", "5", "6"]
+```
 
 # mapメソッド
 
