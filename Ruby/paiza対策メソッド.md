@@ -106,7 +106,7 @@ end
 # countメソッド
 ```ruby
 要素の数を数える
-'abcdefg'.**count**('c')
+'abcdefg'.count('c')
 #=> 1
 ```
 
@@ -156,6 +156,20 @@ p name.first
 fruits = ["apple", "orange", "melon", "banana", "pineapple"]
 p fruits.last
 #=> "pineapple"
+```
+# 配列の各要素を1つに連結する
+## joinメソッド
+```ruby
+words = ['apple', 'melon', 'orange']
+words.join 
+#=> "applemelonorange"
+```
+
+引数に文字列を渡すとその文字列が間に挟み込まれる
+```ruby
+words = ['apple', 'melon', 'orange']
+words.join(', ') 
+#=> "apple, melon, orange"
 ```
 
 # 置換メソッド
