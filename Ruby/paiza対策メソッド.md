@@ -208,6 +208,11 @@ a = [1, 1, 2, 2, 3, 4]
 a.uniq
 #=> [1, 2, 3, 4]
 ```
+重複を判定するにはlengthメソッドと組み合わせる 
+```ruby
+arr = ["HND", "NRT", "KIX", "NGO", "NGO"]
+puts arr.uniq.length != arr.length
+```
 
 ## gsubでの削除
 
