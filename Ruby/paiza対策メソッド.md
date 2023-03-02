@@ -212,6 +212,7 @@ a.uniq
 ```ruby
 arr = ["HND", "NRT", "KIX", "NGO", "NGO"]
 puts arr.uniq.length != arr.length
+#=>　true
 ```
 
 ## gsubでの削除
