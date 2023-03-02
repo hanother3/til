@@ -200,6 +200,15 @@ p replaced # "I like travel, J-pop and baseball."
 ```
 
 # 削除メソッド
+
+## uniq/uniq!での削除
+重複を取り除いた新しい配列を返す
+```ruby
+a = [1, 1, 2, 2, 3, 4]
+a.uniq
+#=> [1, 2, 3, 4]
+```
+
 ## gsubでの削除
 
 ```ruby
