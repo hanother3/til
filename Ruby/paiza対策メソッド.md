@@ -277,7 +277,6 @@ end
 ```
 
 # eachメソッド + 配列
-
 ```ruby
 //入力値取得
 sample = readlines.map &:to_i
@@ -294,6 +293,15 @@ sample.each do |i|
   end
 end
 ```
+範囲でeachメソッドを使う
+```ruby
+(1..3).each do |i|
+ puts i
+end
+#=> 1
+#=> 2
+#=> 3
+```
 # その他
 
 少数点の計算
@@ -309,17 +317,6 @@ puts range[1..3]
 #=> 2
 #=> 3
 #=> 4
-```
-範囲オブジェクト + each
-```ruby
-(1..5).each do |i|
-  p i
-end
-#=>1
-#=>2
-#=>3
-#=>4
-#=>5
 ```
 
 配列の最大値、最小値
