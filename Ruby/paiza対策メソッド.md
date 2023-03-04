@@ -343,6 +343,15 @@ str = "Hello World"
 puts str.upcase
 #=> HELLO WORLD
 ```
+文字を数字(コードポイント)に変換
+
+```ruby
+puts 'A'.ord 
+puts 'B'.ord 
+#=> 65
+#=> 66
+```
+
 
 昇順でソート
 ```ruby
