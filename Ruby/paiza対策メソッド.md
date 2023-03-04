@@ -344,14 +344,17 @@ puts str.upcase
 #=> HELLO WORLD
 ```
 文字を数字(コードポイント)に変換
-
 ```ruby
 puts 'A'.ord 
 puts 'B'.ord 
 #=> 65
 #=> 66
 ```
-
+数字(コードポイント)を文字に変換
+```ruby
+puts 65.chr
+#=> A
+```
 
 昇順でソート
 ```ruby
