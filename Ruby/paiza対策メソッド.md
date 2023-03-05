@@ -302,6 +302,35 @@ end
 #=> 2
 #=> 3
 ```
+
+# ハッシュ
+```ruby
+count = gets.to_i
+hash = {}
+
+count.times do |i|
+    str  = gets.split
+    string = str[0]
+    points = str[1].to_i
+    
+    # if hash[key]　で、keyが重複しているかをチェック
+    if hash[string]
+    # hash[key] = value で値を入力
+       hash[string] += points
+    else
+       hash[string] = points
+    end
+end
+
+# sort_byで、hashのvalueをソート
+hash = hash.sort_by{|_,v| v }.reverse
+
+# 繰り返し処理をする場合は|key,value|で、値を取り出せる
+hash.each do |key,value|
+    puts "#{key} #{value}"
+end
+```
+
 # その他
 
 少数点の計算
