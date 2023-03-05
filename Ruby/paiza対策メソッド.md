@@ -305,6 +305,21 @@ end
 
 # ハッシュ
 ```ruby
+hash = {Kyoko:"B",Rio:"O",Tsubame:"AB",KurodaSensei:"A"}	
+
+# 繰り返し処理をする場合は|key,value|で、値を取り出せる
+hash.each do |key,value|
+    puts "#{key} #{value}"
+end
+#=> Kyoko B
+#=> Rio O
+#=> Tsubame AB
+#=> KurodaSensei A
+```
+
+# ハッシュ + 繰り返し
+## 重複加算
+```ruby
 count = gets.to_i
 hash = {}
 
@@ -325,7 +340,6 @@ end
 # sort_byで、hashのvalueをソート
 hash = hash.sort_by{|_,v| v }.reverse
 
-# 繰り返し処理をする場合は|key,value|で、値を取り出せる
 hash.each do |key,value|
     puts "#{key} #{value}"
 end
