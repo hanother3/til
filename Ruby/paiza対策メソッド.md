@@ -303,6 +303,17 @@ end
 #=> 3
 ```
 
+## each_with_index
+```ruby 
+fruit = ["りんご", "みかん", "いちご"]
+fruit.each_with_index do |item, i|
+  puts "#{i+1}番目のフルーツは、#{item}です。"
+end
+#=> 1番目のフルーツは、りんごです。
+#=> 2番目のフルーツは、みかんです。
+#=> 3番目のフルーツは、いちごです。
+```
+
 # ハッシュ
 ```ruby
 hash = {Kyoko:"B",Rio:"O",Tsubame:"AB",KurodaSensei:"A"}	
