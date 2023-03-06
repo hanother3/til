@@ -317,6 +317,20 @@ end
 #=> KurodaSensei A
 ```
 
+## 入力メソッドつき
+```ruby
+n = gets.chomp.to_i
+blood = {}
+
+n.times do |i|
+    human = gets.chomp.split(" ")
+    
+    # hash[key] = value で値を入力
+    blood[human[0]] = human[1]
+    puts "#{human[0]} #{human[1]}"
+end    
+```
+
 # ハッシュ + 繰り返し
 ## 重複加算
 ```ruby
