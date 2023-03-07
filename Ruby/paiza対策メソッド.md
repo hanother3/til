@@ -341,7 +341,6 @@ n.times do |i|
     puts "#{human[0]} #{human[1]}"
 end    
 ```
-
 # ハッシュ + 繰り返し
 ## 重複加算
 ```ruby
@@ -368,6 +367,24 @@ hash = hash.sort_by{|_,v| v }.reverse
 hash.each do |key,value|
     puts "#{key} #{value}"
 end
+```
+
+# ハッシュ　キーや値を配列として取得
+キーの取得
+```ruby
+fruit = {"Lemon" => 100, "Orange" => 150}
+array = fruit.keys
+puts array
+#=> Lemon
+#=> Orange
+```
+値の取得
+```ruby
+fruit = {"Lemon" => 100, "Orange" => 150}
+array = fruit.values
+puts array
+#=> 100
+#=> 150
 ```
 
 # その他
