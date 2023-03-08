@@ -302,6 +302,39 @@ end
 #=> 2
 #=> 3
 ```
+# eachメソッド　+ 二重ループ
+```ruby
+board = []
+result = 'D'
+
+# 盤面の初期化
+(1..5).each { board.push(gets.chomp.split('')) }
+
+# 盤面の列番号をiで指定
+(0..4).each do |i|
+  o = 0
+  x = 0
+  
+  # 盤面の行番号をrowで指定し、行ごとに判定する
+  board.each do |row|
+    if row[i] == 'O'
+      o += 1
+    elsif row[i] == 'X'
+      x += 1
+    end
+  end
+
+  if o == 5
+    result = 'O'
+    break
+  elsif x == 5
+    result = 'X'
+    break
+  end
+end
+
+puts result
+```
 
 ## each_with_index
 ```ruby 
