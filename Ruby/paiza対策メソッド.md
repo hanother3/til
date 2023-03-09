@@ -347,6 +347,14 @@ end
 #=> 3番目のフルーツは、いちごです。
 ```
 
+# transposeメソッド
+配列を行列と見立て、行と列を入れ替えた配列を返す
+```ruby
+num = [[1,2,3],[4,5,6]]
+p num.transpose
+#=> [[1,4],[2,5],[3,6]]
+```
+
 # ハッシュ
 ```ruby
 hash = {Kyoko:"B",Rio:"O",Tsubame:"AB",KurodaSensei:"A"}	
