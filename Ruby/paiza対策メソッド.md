@@ -173,20 +173,22 @@ words.join(', ')
 
 # 置換メソッド
 ## sub()メソッド
+置換対象の文字列のうち、最初に出現するものを置き換える
 
 ```ruby
-# 置換対象の文字列のうち、最初に出現するものを置き換える
-# 最初の「apple」のみが「orange」に置き換わる。
 article = "This is an apple. The apple is very delicious. Do you like this apple?"
 article_replaced_1 = article.sub("apple", "orange")
 p article_replaced_1 # "This is an orange. The apple is very delicious. Do you like this apple?"
+# 最初の「apple」のみが「orange」に置き換わる。
 ```
 
 ## gsub()メソッド
+置換対象の文字列すべてを置き換える
+
 ```ruby
-# 全ての「apple」が置き換わる
 article_replaced_2 = article.gsub("apple", "orange")
 p article_replaced_2 # "This is an orange. The orange is very delicious. Do you like this orange?"
+# 全ての「apple」が置き換わる
 ```
 
 ## 複数の置換処理
@@ -301,7 +303,7 @@ end
 #=> 2
 #=> 3
 ```
-# eachメソッド　+ 二重ループ
+# eachメソッド + 二重ループ
 ```ruby
 board = []
 result = 'D'
@@ -409,8 +411,7 @@ hash.each do |key,value|
 end
 ```
 
-# ハッシュ　キーや値を配列として取得
-キーの取得
+# ハッシュ + キーの取得
 ```ruby
 fruit = {"Lemon" => 100, "Orange" => 150}
 array = fruit.keys
@@ -418,7 +419,7 @@ puts array
 #=> Lemon
 #=> Orange
 ```
-値の取得
+# ハッシュ + 値の取得
 ```ruby
 fruit = {"Lemon" => 100, "Orange" => 150}
 array = fruit.values
