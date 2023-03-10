@@ -1,43 +1,43 @@
-# 入力メソッド
-
-入力値:文字列　改行：含まれる
-```ruby
-input = gets
-```
-
-入力値：文字列　改行：含まない
-```ruby
-input = gets.chomp
-```
-
-入力値：数値   改行：含まれる
-```ruby
-input = gets.to_i
-```
-
-入力値：数値　 改行：含まない
-```ruby
-input = gets.chomp.to_i
-```
-
 # 出力メソッド
 
-改行なしで出力
 ```ruby
+# 改行なしで出力
 print 'hello'
 ```
 
-改行ありで出力
 ```ruby
+# 改行ありで出力
 puts 'hello' 
 ```
 
-デバッグ用出力（データ形式がわかる）
 ```ruby
+# デバッグ用出力（データ形式がわかる）
 p 'hello'
 ```
 
-# splitメソッド
+# 入力メソッド
+
+```ruby
+# 入力値:文字列　改行：含まれる
+input = gets
+```
+
+```ruby
+# 入力値：文字列　改行：含まない
+input = gets.chomp
+```
+
+```ruby
+# 入力値：数値   改行：含まれる
+input = gets.to_i
+```
+
+```ruby
+# 入力値：数値　 改行：含まない
+input = gets.chomp.to_i
+```
+
+## splitメソッド
 
 文字列を指定した区切り文字で分割し、配列で返す
 ```ruby
@@ -57,7 +57,7 @@ p array
 #=> ["1", "2", "3", "4", "5", "6"]
 ```
 
-# mapメソッド
+## mapメソッド
 
 配列の要素の数だけブロック内で処理を繰り返し、新しい配列を返す
 ```ruby
@@ -75,39 +75,32 @@ p array
 end
 ```
 
-# 配列メソッド
+# 入力メソッド + 配列
 ```ruby
-//入力値を配列に格納　　※map &:to_iで、数値に変換している　
+# 入力値を配列に格納　　※map &:to_iで、数値に変換している　
 input = gets.split.map(&:to_i)
 ```
 ```ruby
-//分割して配列に格納　　※それぞれの変数に格納
+# 分割して配列に格納　　※それぞれの変数に格納
 a,b,c = gets.split(" ").map &:to_i
 ```
 ```ruby
-//複数行の入力値を順番に格納
+# 複数行の入力値を順番に格納
 a = readlines.map &:to_i
 ```
 ```ruby
-//複数行 && 複数要素の格納  ※文字列
+# 複数行 && 複数要素の格納  ※文字列
 lines = []
 while line = gets
   lines << line.chomp.split(' ')
 end
 ```
 ```ruby
-//複数行 && 複数要素の格納  ※数値
+# 複数行 && 複数要素の格納  ※数値
 lines = []
 while line = gets
   lines << line.chomp.split(' ').map(&:to_i)
 end
-```
-
-# countメソッド
-```ruby
-要素の数を数える
-'abcdefg'.count('c')
-#=> 1
 ```
 
 # selectメソッド + 配列
@@ -131,8 +124,15 @@ p list_new
 #=>["yamamoto", "oyama"]
 ```
 
-# 配列に指定した要素が存在するか確認する
-## include?
+# countメソッド
+要素の数を数える
+```ruby
+'abcdefg'.count('c')
+#=> 1
+```
+
+# include?
+配列に指定した要素が存在するか確認する
 
 ```ruby
 fruits = ["apple", "orange", "melon"]
@@ -140,8 +140,7 @@ puts fruits.include?("mel")
 #=> false
 ```
 
-# 配列の最初と最後の要素を取得
-## firstメソッド
+# firstメソッド
 配列の最初の要素を取得
 
 ```ruby
@@ -149,7 +148,7 @@ name = ["taro", "hanako", "ichiro", "jiro"]
 p name.first
 #=> "taro"
 ```
-## lastメソッド
+# lastメソッド
 配列の最後の要素を取得
 
 ```ruby
@@ -157,8 +156,8 @@ fruits = ["apple", "orange", "melon", "banana", "pineapple"]
 p fruits.last
 #=> "pineapple"
 ```
-# 配列の各要素を1つに連結する
-## joinメソッド
+# joinメソッド
+配列の各要素を1つに連結する
 ```ruby
 words = ['apple', 'melon', 'orange']
 words.join 
@@ -176,27 +175,27 @@ words.join(', ')
 ## sub()メソッド
 
 ```ruby
-//置換対象の文字列のうち、最初に出現するものを置き換える
+# 置換対象の文字列のうち、最初に出現するものを置き換える
+# 最初の「apple」のみが「orange」に置き換わる。
 article = "This is an apple. The apple is very delicious. Do you like this apple?"
 article_replaced_1 = article.sub("apple", "orange")
 p article_replaced_1 # "This is an orange. The apple is very delicious. Do you like this apple?"
-※最初の「apple」のみが「orange」に置き換わる。
 ```
 
 ## gsub()メソッド
 ```ruby
+# 全ての「apple」が置き換わる
 article_replaced_2 = article.gsub("apple", "orange")
 p article_replaced_2 # "This is an orange. The orange is very delicious. Do you like this orange?"
-※全ての「apple」が置き換わる
 ```
 
 ## 複数の置換処理
+置換処理パターンをハッシュで定義し、引数に渡すことで、一括処理ができる
 ```ruby
 article = "I like travel, rock and soccer."
 pattern = { "rock" => "J-pop", "soccer" => "baseball" }
 replaced = article.gsub(/rock|soccer/, pattern)
 p replaced # "I like travel, J-pop and baseball."
-※置換処理パターンをハッシュで定義し、引数に渡すことで、一括処理ができる
 ```
 
 # 削除メソッド
@@ -218,14 +217,14 @@ puts arr.uniq.length != arr.length
 ## gsubでの削除
 
 ```ruby
-//ハイフンを空白にして、削除している
+# ハイフンを空白にして、削除している
 input = gets.gsub("-", "")
 ```
 
 ## delete メソッド
 
 ```ruby
-//文字列から、指定の文字列を削除する
+# 文字列から、指定の文字列を削除する
 str = "abcdaaefaagh"
 str.delete("a")
 #=> "bcdefgh"
@@ -234,7 +233,7 @@ str.delete("a")
 ## sliceメソッド
 
 ```ruby
-//文字列から、開始位置と取得文字数を指定して取り出す
+# 文字列から、開始位置と取得文字数を指定して取り出す
 str = "0123456789"
 str.slice(3, 5)
 #=> "34567"
@@ -252,12 +251,12 @@ end
 # timesメソッド + 配列
 
 ```ruby
-//繰り返し回数
+# 繰り返し回数
 n = 5
-//配列の設定
+# 配列の設定
 sample = []
 
-//繰り返し回数分、配列に格納
+# 繰り返し回数分、配列に格納
 n.times do
   sample.push(gets.chomp.map &:to_i)
 end
@@ -266,8 +265,8 @@ end
 ## returnの注意点
 
 ```ruby
-//トップレベルで return した場合はプログラムが終了する。
-※トップレベルとは、そのファイルの一番上のスコープのこと。
+# トップレベルで return した場合はプログラムが終了する。
+# トップレベルとは、そのファイルの一番上のスコープのこと。
 
 //ここのこと
 def hoge
@@ -278,13 +277,13 @@ end
 
 # eachメソッド + 配列
 ```ruby
-//入力値取得
+# 入力値取得
 sample = readlines.map &:to_i
 
-//変数宣言
+# 変数宣言
 n = 5
 
-//eachメソッド
+# eachメソッド
 sample.each do |i|
   if n < 10
     n += 1
@@ -498,7 +497,7 @@ p array.sort.reverse
 
 2次元配列のソート
 ```ruby
-#arr[1]で昇順にソート
+# arr[1]で昇順にソート
 arr = [[1, 3], [1, 5], [1, 2], [2, 4], [2, 2]] 
 p arr.sort {|a,b| a[1] <=> b[1]}
 #=> [[1, 2], [2, 2], [1, 3], [2, 4], [1, 5]]
