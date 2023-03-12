@@ -336,8 +336,17 @@ end
 
 puts result
 ```
+## each_slice
+配列を指定の要素数ごとに分割する
+```ruby
+ary = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]
+# ５つごとに分割
+p ary.each_slice(5).to_a
+#=> [["a", "b", "c", "d", "e"], ["f", "g", "h", "i", "j"]]
+```
 
 ## each_with_index
+ループを回しつつ、index番号を取得する
 ```ruby 
 fruit = ["りんご", "みかん", "いちご"]
 fruit.each_with_index do |item, i|
