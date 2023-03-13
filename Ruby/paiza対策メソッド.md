@@ -296,6 +296,7 @@ end
 ```
 範囲でeachメソッドを使う
 ```ruby
+# 1以上 3以下
 (1..3).each do |i|
  puts i
 end
@@ -303,6 +304,15 @@ end
 #=> 2
 #=> 3
 ```
+```ruby
+# 1以上 3未満
+(1...3).each do |i|
+ puts i
+end
+#=> 1
+#=> 2
+```
+
 # eachメソッド + 二重ループ
 ```ruby
 board = []
