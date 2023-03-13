@@ -99,11 +99,11 @@ n.times do
     if str == ban
       puts "banned"
     elsif str[0...(str.size+1)/2] == ban[0...(str.size+1)/2]
-      put = "x" * ((str.size+1)/2)
-      puts put + str[(str.size+1)/2...str.size]
-    elsif str[str.size/2...str.size] == ban[str.size/2...ban.size]
-      put = "x" * ((str.size+1)/2)
-      puts str[0...str.size/2] + put
+      x = "x" * ((str.size+1)/2)
+      puts x + str[(str.size+1)/2...str.size]
+    elsif str[str.size/2...str.size] == ban[str.size/2...str.size]
+      x = "x" * ((str.size+1)/2)
+      puts str[0...str.size/2] + x
     else
       puts str
     end
