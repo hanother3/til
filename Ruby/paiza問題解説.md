@@ -59,6 +59,7 @@ end
 ```ruby
 s = gets.chomp
 
+ # 0以上 s.length未満
 (0...s.length).each do |i|
   (i...s.length).each do |j|
     if s[i].match?(/\d/) && s[j].match?(/\d/)
