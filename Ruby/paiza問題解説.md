@@ -1,3 +1,5 @@
+# 新・Bランクレベルアップメニュー
+
 【マップの扱い 2】マップの書き換え・縦横
 
 ```ruby
@@ -83,4 +85,41 @@ end
 # 内側のループが終了すると、外側のループが i=1 で再び始まり、内側のループが j=1 で始まる。
 # これが最後の組み合わせになるまで、i と j の値を増やし続ける。
 
+```
+
+【条件判定 3】過剰コンプライアンス
+```ruby
+n = gets.chomp.to_i
+ban = gets.chomp
+
+n.times do
+  str = gets.chomp
+
+  if str.size == ban.size
+    if str == ban
+      puts "banned"
+    elsif str[0...(str.size+1)/2] == ban[0...(str.size+1)/2]
+      put = "x" * ((str.size+1)/2)
+      puts put + str[(str.size+1)/2...str.size]
+    elsif str[str.size/2...str.size] == ban[str.size/2...ban.size]
+      put = "x" * ((str.size+1)/2)
+      puts str[0...str.size/2] + put
+    else
+      puts str
+    end
+  else
+    puts str
+  end
+end
+
+# このコードは、最初に整数 n と文字列 ban を読み込み、その後に n回ループを実行し、各ループで文字列 str を読み込んで処理を行うものです。
+# 具体的には、各ループでは、str の長さが ban の長さと等しい場合には、以下の処理を行います。
+# str が ban と等しい場合には、"banned" と出力します。
+# str の前半部分が ban の前半部分と一致する場合には、str の前半部分に "x" をつなげ、str の後半部分をそのままつなげた文字列を出力します。
+# str の後半部分が ban の後半部分と一致する場合には、str の前半部分をそのままつなげ、str の後半部分に "x" をつなげた文字列を出力します。
+# 上記以外の場合には、str をそのまま出力します。
+# str の長さが ban と等しくない場合には、str をそのまま出力します。
+# 具体的な処理は、文字列のスライスを利用して行われています。
+# 例えば、str[0...(str.size+1)/2] は、str の先頭から (str.size+1)/2 文字目までの部分文字列を取得することを意味します。
+# また、"x" を繰り返しつなげる場合には、"x" * ((str.size+1)/2) のように、* 演算子を使って簡単に表現できます。
 ```
