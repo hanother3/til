@@ -124,3 +124,39 @@ end
 # 例えば、str[0...(str.size+1)/2] は、str の先頭から (str.size+1)/2 文字目までの部分文字列を取得することを意味します。
 # また、"x" を繰り返しつなげる場合には、"x" * ((str.size+1)/2) のように、* 演算子を使って簡単に表現できます。
 ```
+
+【全探索 1】高い寿司を食いたい！
+
+```ruby
+num, eat = gets.chomp.split.map(&:to_i)
+price = []
+
+num.times do |i|
+    price << gets.chomp.to_i
+end
+
+eat_price = 0
+
+(0...num).each do |i|
+  sum = 0
+  (0...eat).each do |j|
+    sum += price[(i + j) % num]
+  end
+  
+  # eat_price と sum の大きい方を eat_price に代入
+  eat_price = [eat_price, sum].max
+end
+
+puts eat_price
+
+# このコードは、与えられた数列から、連続した部分列の中で要素の和が最大になるものを見つけて、それを出力するプログラムです。
+# 最初に、 gets.chomp.split.map(&:to_i)を使って、標準入力から2つの整数を読み込み、それぞれ num と eat に代入しています。
+# num は数列の要素数を表し、eat は求める連続した部分列の長さを表します。
+# 次に、配列 price を初期化し、num 回繰り返しを行います。
+# 各繰り返しでは、 gets.chomp.to_iを使って標準入力から整数を読み込み、配列 price に追加しています。
+# このようにして、与えられた数列が price 配列に格納されます。
+# 次に、eat_price を初期化し、2重の繰り返しを行います。外側の繰り返しでは、num 回繰り返しを行い、内側の繰り返しでは、eat 回繰り返しを行います。
+# 内側の繰り返しでは、現在の位置から eat 個先の要素を順に加算して sum に格納します。
+# 内側の繰り返しが終了したら、eat_price と sum の大きい方を eat_price に代入します。
+# 最後に、eat_price を出力します。これは、与えられた数列から求めた連続した部分列の中で、要素の和が最大になるものです。
+```
