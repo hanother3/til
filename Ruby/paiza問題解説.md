@@ -159,3 +159,40 @@ puts eat_price
 # 内側の繰り返しが終了したら、eat_price と sum の大きい方を eat_price に代入します。
 # 最後に、eat_price を出力します。これは、与えられた数列から求めた連続した部分列の中で、要素の和が最大になるものです。
 ```
+
+【シミュレーション 2】perfuct shuffle
+```ruby
+k = gets.to_i
+deck = []
+upper_side = []
+lower_side = []
+mark = ["S", "H", "D", "C"]
+
+mark.each do |m|
+  (1..13).each do |n|
+    deck.push(m + "_" + n.to_s)
+  end
+end
+
+k.times do
+  upper_side = deck[0..25]
+  lower_side = deck[26..51]
+  deck.each_with_index do |_val, i|
+    if i % 2 == 0
+      deck[i] = upper_side[i / 2]
+    else
+      deck[i] = lower_side[i / 2]
+    end
+  end
+end
+
+puts deck
+
+# このコードは、トランプのカードをシャッフルする処理を行うものです。
+# 最初に、gets.to_iを使って、トランプをシャッフルするための繰り返し回数を読み込み、 k に代入します。
+# 次に、 deck という配列を定義し、mark の各スートと、各スートの1から13までの数字を組み合わせて作られる、52枚のカードを順に push していきます。
+# その後、トランプをシャッフルするために、 upper_side と lower_side という配列を定義し、deck の上半分と下半分にそれぞれ格納します。
+# そして、 deck の要素を順番に走査し、偶数番目の要素は upper_side の要素を、奇数番目の要素は lower_side の要素を挿入します。
+# この処理で、トランプをシャッフルしていることになります。
+# 最後に、 deck を出力することで、シャッフルされたトランプのカードが表示されます。
+```
