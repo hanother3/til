@@ -231,8 +231,17 @@ str = "abcdaaefaagh"
 str.delete("a")
 #=> "bcdefgh"
 ```
+## differenceメソッド
 
-## sliceメソッド
+```ruby
+# 指定した配列の要素と、同じ要素を取り除いた新しい配列を返す
+ary1 = [1, 2, 3, 5, 4, 3]
+ary2 = [2, 3]
+newary = ary1.difference(ary2)
+#=> [1, 5, 4]
+```
+
+# sliceメソッド
 
 ```ruby
 # 文字列から、開始位置と取得文字数を指定して取り出す
