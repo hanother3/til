@@ -196,3 +196,38 @@ puts deck
 # この処理で、トランプをシャッフルしていることになります。
 # 最後に、 deck を出力することで、シャッフルされたトランプのカードが表示されます。
 ```
+
+【計算 1】マンハッタン距離
+```ruby
+px, py = gets.split.map(&:to_i)
+n = gets.to_i
+
+euclid_len = []
+manhattan_len = []
+
+n.times do |i|
+  x, y = gets.split.map(&:to_i)
+  euclid_len << [(px - x) ** 2 + (py - y) ** 2, i + 1]
+  manhattan_len << [(px - x).abs + (py - y).abs, i + 1]
+end
+
+euclid_len.sort!
+manhattan_len.sort!
+
+3.times do |i|
+  puts euclid_len[i][1]
+end
+
+3.times do |i|
+  puts manhattan_len[i][1]
+end
+
+# このコードは、点 (px, py) と複数の点 (x, y) の間の距離を計算して、それらの距離に基づいて最も近い3つの点のインデックスを出力するプログラムです。
+# 具体的には、以下の手順に従っています。
+# 入力された px と py の値を取得し、整数に変換して変数に代入します。
+# 入力された点の数 n の値を取得し、整数に変換して変数に代入します。
+# euclid_len と manhattan_len という2つの空の配列を作成します。
+# これらの配列に、各点 (x, y) と点 (px, py) とのユークリッド距離とマンハッタン距離を計算した結果を、距離の値とその点のインデックス (i + 1) とのペアの形式で追加していきます。
+# euclid_len と taxi_len を距離の値に基づいてソートします。
+# 最も近い3つの距離に対応するインデックスを出力します。
+```
