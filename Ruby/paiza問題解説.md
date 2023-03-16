@@ -207,6 +207,8 @@ manhattan_len = []
 
 n.times do |i|
   x, y = gets.split.map(&:to_i)
+  
+  # **は累乗（同じ数をくり返しかけ算する）
   euclid_len << [(px - x) ** 2 + (py - y) ** 2, i + 1]
   manhattan_len << [(px - x).abs + (py - y).abs, i + 1]
 end
