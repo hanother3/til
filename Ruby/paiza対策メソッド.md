@@ -78,6 +78,7 @@ while line = gets
   lines << line.chomp.split(' ').map(&:to_i)
 end
 ```
+
 # 配列メソッド
 デフォルト値の設定
 ```ruby
@@ -141,22 +142,6 @@ p list_new
 #=>["yamamoto", "oyama"]
 ```
 
-## countメソッド
-条件に合った要素の数を数える
-```ruby
-array = ["red","blue","yellow","red","green"]
-p array.count("red")
-#=> 2
-```
-
-## flattenメソッド
-入れ子になった配列を平坦(１次元)にする
-```ruby
-array = [1, 2, [3, 4], 5, 6, [7, 8, 9]]
-p array.flatten
-#=> [1, 2, 3, 4, 5, 6, 7, 8, 9]
-```
-
 ## firstメソッド
 配列の最初の要素を取得
 
@@ -173,6 +158,8 @@ fruits = ["apple", "orange", "melon", "banana", "pineapple"]
 p fruits.last
 #=> "pineapple"
 ```
+
+## 結合メソッド
 ## joinメソッド
 配列の各要素を1つに連結する
 ```ruby
@@ -186,6 +173,16 @@ words.join
 words = ['apple', 'melon', 'orange']
 words.join(' ') 
 #=> "apple melon orange"
+```
+
+## +メソッド
+配列同士を連結する
+```ruby
+array1 = ['a', 'b']
+array2 = ['c', 'd']
+array3 = ['e', 'f']
+array1 + array2 + array3
+=> ["a", "b", "c", "d", "e", "f"]
 ```
 
 ## 重複メソッド
@@ -210,6 +207,15 @@ a.uniq
 arr = ["HND", "NRT", "KIX", "NGO", "NGO"]
 puts arr.uniq.length != arr.length
 #=>　true
+```
+
+## differenceメソッド
+```ruby
+# 指定した配列の要素と、同じ要素を取り除いた新しい配列を返す
+ary1 = [1, 2, 3, 5, 4, 3]
+ary2 = [2, 3]
+newary = ary1.difference(ary2)
+#=> [1, 5, 4]
 ```
 
 ## 置換メソッド
@@ -264,15 +270,6 @@ str.delete("a")
 #=> "bcdefgh"
 ```
 
-## differenceメソッド
-```ruby
-# 指定した配列の要素と、同じ要素を取り除いた新しい配列を返す
-ary1 = [1, 2, 3, 5, 4, 3]
-ary2 = [2, 3]
-newary = ary1.difference(ary2)
-#=> [1, 5, 4]
-```
-
 # transposeメソッド
 配列を行列と見立て、行と列を入れ替えた配列を返す
 ```ruby
@@ -281,7 +278,24 @@ p num.transpose
 #=> [[1,4],[2,5],[3,6]]
 ```
 
-# sliceメソッド
+## countメソッド
+条件に合った要素の数を数える
+```ruby
+array = ["red","blue","yellow","red","green"]
+p array.count("red")
+#=> 2
+```
+
+## flattenメソッド
+入れ子になった配列を平坦(１次元)にする
+```ruby
+array = [1, 2, [3, 4], 5, 6, [7, 8, 9]]
+p array.flatten
+#=> [1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
+# 文字列メソッド
+## sliceメソッド
 ```ruby
 # 文字列から、開始位置と取得文字数を指定して取り出す
 str = "0123456789"
