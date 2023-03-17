@@ -269,8 +269,8 @@ str = "abcdaaefaagh"
 str.delete("a")
 #=> "bcdefgh"
 ```
-
-# transposeメソッド
+## その他メソッド
+## transposeメソッド
 配列を行列と見立て、行と列を入れ替えた配列を返す
 ```ruby
 num = [[1,2,3],[4,5,6]]
