@@ -187,8 +187,8 @@ words.join
 引数に文字列を渡すとその文字列が間に挟み込まれる
 ```ruby
 words = ['apple', 'melon', 'orange']
-words.join(', ') 
-#=> "apple, melon, orange"
+words.join(' ') 
+#=> "apple melon orange"
 ```
 
 ## 置換メソッド
