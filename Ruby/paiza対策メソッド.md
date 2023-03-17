@@ -419,6 +419,13 @@ end
 #=> Tsubame AB
 #=> KurodaSensei A
 ```
+デフォルト値の設定
+```ruby
+# 無効キーを参照したときのデフォルト値を0に変更
+hash = Hash.new(0)
+puts hash[:age]
+#=> 0
+```
 
 ## 入力メソッドつき
 ```ruby
