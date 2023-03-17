@@ -221,6 +221,15 @@ p replaced # "I like travel, J-pop and baseball."
 ```
 
 ## 削除メソッド
+## popメソッド
+末尾の要素を削除する
+```ruby
+array = [1, 2, 3]
+array.pop
+p array
+#=> [1, 2]
+```
+
 ## uniq/uniq!での削除
 重複を取り除いた新しい配列を返す
 ```ruby
