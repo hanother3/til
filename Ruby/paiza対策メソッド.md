@@ -157,15 +157,6 @@ p array.flatten
 #=> [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
-## include?
-配列に指定した要素が存在するか確認する
-
-```ruby
-fruits = ["apple", "orange", "melon"]
-puts fruits.include?("mel")
-#=> false
-```
-
 ## firstメソッド
 配列の最初の要素を取得
 
@@ -197,6 +188,30 @@ words.join(' ')
 #=> "apple melon orange"
 ```
 
+## 重複メソッド
+## include?
+配列に指定した要素が存在するか確認する
+
+```ruby
+fruits = ["apple", "orange", "melon"]
+puts fruits.include?("mel")
+#=> false
+```
+
+## uniq/uniq!
+重複を取り除いた新しい配列を返す
+```ruby
+a = [1, 1, 2, 2, 3, 4]
+a.uniq
+#=> [1, 2, 3, 4]
+```
+重複を判定するにはlengthメソッドと組み合わせる 
+```ruby
+arr = ["HND", "NRT", "KIX", "NGO", "NGO"]
+puts arr.uniq.length != arr.length
+#=>　true
+```
+
 ## 置換メソッド
 ## sub()メソッド
 置換対象の文字列のうち、最初に出現するものを置き換える
@@ -217,8 +232,7 @@ p article_replaced_2 # "This is an orange. The orange is very delicious. Do you 
 # 全ての「apple」が置き換わる
 ```
 
-## 複数の置換処理
-置換処理パターンをハッシュで定義し、引数に渡すことで、一括処理ができる
+置換処理パターンをハッシュで定義し、引数に渡すことで、まとめて処理ができる
 ```ruby
 article = "I like travel, rock and soccer."
 pattern = { "rock" => "J-pop", "soccer" => "baseball" }
@@ -234,20 +248,6 @@ array = [1, 2, 3]
 array.pop
 p array
 #=> [1, 2]
-```
-
-## uniq/uniq!での削除
-重複を取り除いた新しい配列を返す
-```ruby
-a = [1, 1, 2, 2, 3, 4]
-a.uniq
-#=> [1, 2, 3, 4]
-```
-重複を判定するにはlengthメソッドと組み合わせる 
-```ruby
-arr = ["HND", "NRT", "KIX", "NGO", "NGO"]
-puts arr.uniq.length != arr.length
-#=>　true
 ```
 
 ## gsubでの削除
