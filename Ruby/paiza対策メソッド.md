@@ -460,8 +460,8 @@ n.times do |i|
     puts "#{human[0]} #{human[1]}"
 end    
 ```
-# ハッシュ + 繰り返し
-## 重複加算
+## ハッシュ + 繰り返し
+重複加算
 ```ruby
 count = gets.to_i
 hash = {}
@@ -488,7 +488,7 @@ hash.each do |key,value|
 end
 ```
 
-# ハッシュ + キーの取得
+## キーの取得
 ```ruby
 fruit = {"Lemon" => 100, "Orange" => 150}
 array = fruit.keys
@@ -496,7 +496,14 @@ puts array
 #=> Lemon
 #=> Orange
 ```
-# ハッシュ + 値の取得
+## キーの存在確認
+```ruby
+planet = { Mercury: 'emerald',　Venus: 'diamond' }
+p planet.key?(:Mercury)
+#=> true
+```
+
+## 値の取得
 ```ruby
 fruit = {"Lemon" => 100, "Orange" => 150}
 array = fruit.values
