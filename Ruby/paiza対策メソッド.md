@@ -122,6 +122,7 @@ p array
 end
 ```
 
+## 取得メソッド
 ## selectメソッド
 配列、ハッシュから、ある条件を満たす要素だけを取り出す。
 
@@ -157,6 +158,15 @@ p name.first
 fruits = ["apple", "orange", "melon", "banana", "pineapple"]
 p fruits.last
 #=> "pineapple"
+```
+
+## sliceメソッド
+配列の範囲を指定して取り出す
+```ruby
+# 開始位置と取得要素数を指定して取り出す
+array = ["Ruby","Python","Java"]
+p array.slice(0,2)
+#=> ["Ruby", "Python"]
 ```
 
 ## 結合メソッド
