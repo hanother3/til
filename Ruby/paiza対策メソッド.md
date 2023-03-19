@@ -670,6 +670,16 @@ str = "Hello World"
 puts str.upcase
 #=> HELLO WORLD
 ```
+
+文字列に大文字を含むか判定する
+```ruby
+str = "Hello"
+if str =~ /[A-Z]/   #大文字があるかチェック
+    puts "YES"
+end    
+#=> YES
+```
+
 文字を数字(コードポイント)に変換
 ```ruby
 puts 'A'.ord 
