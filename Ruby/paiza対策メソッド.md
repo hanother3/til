@@ -281,6 +281,24 @@ p replaced # "I like travel, J-pop and baseball."
 ```
 
 ## 削除メソッド
+## deleteメソッド
+引数と同じ要素を削除
+```ruby
+a = [1, 2, 2, 3, 3]
+a.delete(2)
+print a
+#=> [1, 3, 3]
+```
+
+## delete_atメソッド
+指定位置の要素を削除
+```ruby
+a = ["a", "b", "c", "d"]
+a.delete_at(2)
+print a
+#=> ["a", "b", "d"]
+```
+
 ## popメソッド
 末尾の要素を削除する
 ```ruby
@@ -296,13 +314,7 @@ p array
 input = gets.gsub("-", "")
 ```
 
-## delete メソッド
-```ruby
-# 文字列から、指定の文字列を削除する
-str = "abcdaaefaagh"
-str.delete("a")
-#=> "bcdefgh"
-```
+
 ## その他メソッド
 ## indexメソッド
 配列内の指定した要素の位置を取得
@@ -365,6 +377,14 @@ p arr.sort {|a,b| a[1] <=> b[1]}
 str = "0123456789"
 str.slice(3, 5)
 #=> "34567"
+```
+
+## delete メソッド
+```ruby
+# 文字列から、指定の文字列を削除する
+str = "abcdaaefaagh"
+str.delete("a")
+#=> "bcdefgh"
 ```
 
 # timesメソッド
