@@ -378,34 +378,34 @@ end
 ```
 
 # 配列メニュー
-i番目の出力 
+i番目の出力 2 
 ```ruby
-K,L = gets.chomp.split.map &:to_i
+K,L = gets.split.map &:to_i
+arr= Array.new(3) {Array.new(3)}
 
-A = Array.new(3) { Array.new(3, 0) }
 (0...3).each do |i|
-  values = gets.chomp.split(' ')
-  (0...3).each do |j|
-    A[i][j] = values[j].to_i
-  end
+    line = gets.chomp.split.map(&:to_i)
+    (0...3).each do |j|
+        arr[i][j] = line[j]
+    end
 end
 
-puts A[K-1][L-1]
+puts arr[K - 1][L - 1]
 
 # このコードは、ユーザーからの入力を処理し、2次元配列から要素を取り出して出力するものです。
 # 最初の行では、ユーザーから2つの整数値を取得し、それらを K と L に割り当てます。
-# 次に、3x3のゼロ行列 A を作成します。これは、後で要素を置き換えるための土台として使用されます。
+# 次に、3x3の nil行列 arr を作成します。これは、後で要素を置き換えるための土台として使用されます。
 # 3回のループを使用して、3つの行のそれぞれについて、ユーザーから3つの整数値を取得します。
-# その後、各整数値を、A の対応する位置にある要素に変換し、 A を更新します。
-# 最後に、A[K-1][L-1]を出力します。これは、K行L列の要素にアクセスするために、K-1行、L-1列のインデックスが使用されるためです。
+# その後、各整数値を、arr の対応する位置にある要素に変換し、 arr を更新します。
+# 最後に、arr[K-1][L-1]を出力します。これは、K行L列の要素にアクセスするために、K-1行、L-1列のインデックスが使用されるためです。
 # つまり、ユーザーによって入力された行番号と列番号は、0から始まる配列のインデックスに変換されます。
 ```
 
-【二次元配列の入出力】i番目の出力
+【二次元配列の入出力】i番目の出力 Boss
 ```ruby
 N,M,K,L = gets.split.map &:to_i
 
-arr= Array.new(N) { Array.new(M) }
+arr= Array.new(N) {Array.new(M)}
 
 (0...N).each do |i|
     line = gets.chomp.split.map(&:to_i)
