@@ -289,12 +289,13 @@ str.delete("a")
 #=> "bcdefgh"
 ```
 ## その他メソッド
-## transposeメソッド
-配列を行列と見立て、行と列を入れ替えた配列を返す
+## indexメソッド
+配列内の指定した要素の位置を取得
 ```ruby
-num = [[1,2,3],[4,5,6]]
-p num.transpose
-#=> [[1,4],[2,5],[3,6]]
+# 最初の要素の位置しか得られないので注意
+arr = ["apple", "grape", "orange", "banana", "meron", "banana"]
+p arr.index("banana")
+#=> 3
 ```
 
 ## countメソッド
@@ -303,6 +304,14 @@ p num.transpose
 array = ["red","blue","yellow","red","green"]
 p array.count("red")
 #=> 2
+```
+
+## transposeメソッド
+配列を行列と見立て、行と列を入れ替えた配列を返す
+```ruby
+num = [[1,2,3],[4,5,6]]
+p num.transpose
+#=> [[1,4],[2,5],[3,6]]
 ```
 
 ## flattenメソッド
