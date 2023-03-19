@@ -685,14 +685,14 @@ p arr
 昇順でソート
 ```ruby
 array = [300, 200, 150, 400, 100]
-p array.sort
+p array.sort  #文字列も可
 #=> [100, 150, 200, 300, 400]
 ```
 
 降順でソート
 ```ruby
 array = [300, 200, 150, 400, 100]
-p array.sort.reverse
+p array.sort.reverse  #文字列も可
 #=> [400, 300, 200, 150, 100]
 ```
 
