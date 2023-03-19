@@ -308,6 +308,15 @@ print a
 #=> ["a", "b", "d"]
 ```
 
+## shiftメソッド
+先頭の要素を削除する
+```ruby
+array = [1, 2, 3]
+array.shift
+p array
+#=> [2, 3]
+```
+
 ## popメソッド
 末尾の要素を削除する
 ```ruby
