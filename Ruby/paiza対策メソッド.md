@@ -183,6 +183,16 @@ p arr.slice(0,2)
 #=> ["Ruby", "Python"]
 ```
 
+## 追加メソッド
+## pushメソッド
+配列の末尾に要素を追加
+```ruby
+fruits = ["apple", "orange"]
+fruits.push("strawberry")  #fruits << "strawberry"  でも可。
+p fruits
+#=> ["apple", "orange", "strawberry"]
+```
+
 ## 結合メソッド
 ## joinメソッド
 配列の各要素を1つに連結する
