@@ -172,9 +172,14 @@ p fruits.last
 ## sliceメソッド
 配列の範囲を指定して取り出す
 ```ruby
-# 開始位置と取得要素数を指定して取り出す
-array = ["Ruby","Python","Java"]
-p array.slice(0,2)
+# 配列のインデックスの範囲を指定する
+arr = ["Ruby","Python","Java"]
+p arr.slice(0..2)
+#=> ["Ruby", "Python", "Java"]
+
+# 開始位置と取得要素数を指定する
+arr = ["Ruby","Python","Java"]
+p arr.slice(0,2)
 #=> ["Ruby", "Python"]
 ```
 
