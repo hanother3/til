@@ -314,12 +314,12 @@ p array.flatten
 ## 二次元配列の作成
 ```ruby
 # ２行３列の配列を作成。初期値はnil
-arr = Array.new(2) { Array.new(3) }
+arr = Array.new(2) {Array.new(3)}
 p arr
 #=> [[nil, nil, nil], [nil, nil, nil]]
 
 # ２行３列の配列を作成。初期値は０
-arr = Array.new(2) { Array.new(3, 0) }
+arr = Array.new(2) {Array.new(3, 0)}
 p arr
 #=> [[0, 0, 0], [0, 0, 0]]
 ```
