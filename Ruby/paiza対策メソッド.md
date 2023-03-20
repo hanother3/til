@@ -652,6 +652,13 @@ puts range[1..3]
 #=> 4
 ```
 
+a〜zを出力
+```ruby
+("a".."z").each do |i|
+    puts i
+end
+```
+
 配列の最大値、最小値
 ```ruby
 sample = [5, 8, -6, 15]
