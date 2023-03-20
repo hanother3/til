@@ -414,11 +414,17 @@ str.delete("a")
 ```
 
 # timesメソッド
+## 基本形
 ```ruby
 3.times do |num|
-  p num
+  puts num
 end
 ※num は 0から
+```
+
+## 省略形
+```ruby
+3.times { |num| puts num }
 ```
 
 # timesメソッド + 配列
@@ -446,7 +452,7 @@ end
 //ここのこと
 ```
 # eachメソッド
-## 基本
+## 基本形
 ```ruby
 nums = [1, 2, 3]
 nums.each do |i|
