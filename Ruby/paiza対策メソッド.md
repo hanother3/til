@@ -446,24 +446,26 @@ end
 //ここのこと
 ```
 # eachメソッド
-## eachメソッド + 配列
+## 基本
 ```ruby
-# 入力値取得
-sample = readlines.map &:to_i
-
-# 変数宣言
-n = 5
-
-# eachメソッド
-sample.each do |i|
-  if n < 10
-    n += 1
-  else    
-    puts "sample"
-  end
+nums = [1, 2, 3]
+nums.each do |i|
+    puts i
 end
+#=> 1
+#=> 2
+#=> 3
 ```
-範囲でeachメソッドを使う
+## 省略形
+```ruby
+nums = [1, 2, 3]
+nums.each { |i| puts i }
+#=> 1
+#=> 2
+#=> 3
+```
+
+## eachメソッド + 範囲
 ```ruby
 # 1以上 3以下
 (1..3).each do |i|
