@@ -536,6 +536,19 @@ end
 #=> 3番目のフルーツは、いちごです。
 ```
 
+# whileメソッド
+```ruby
+N, K = gets.split.map &:to_i
+count = 0
+
+while N < K do  # NがKの値を超えるまで中の処理を繰り返す
+    N = N * 2
+    count += 1
+end    
+
+puts count
+```
+
 # ハッシュ
 ```ruby
 hash = {Kyoko:"B",Rio:"O",Tsubame:"AB",KurodaSensei:"A"}	
