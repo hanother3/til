@@ -445,8 +445,8 @@ def hoge
 end
 //ここのこと
 ```
-
-# eachメソッド + 配列
+# eachメソッド
+## eachメソッド + 配列
 ```ruby
 # 入力値取得
 sample = readlines.map &:to_i
@@ -482,7 +482,19 @@ end
 #=> 2
 ```
 
-# eachメソッド + 二重ループ
+## reverse_eachメソッド
+逆順に出力する
+```ruby
+nums = [1, 2, 3]
+nums.reverse_each do |i|
+  puts i
+end
+#=> 3
+#=> 2
+#=> 1
+```
+
+## eachメソッド + 二重ループ
 ```ruby
 board = []
 result = 'D'
