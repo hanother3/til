@@ -511,3 +511,23 @@ end
 # 上記の条件が成立しない場合で、N - A + B == 0 または N - A - B == 0 の場合は、同様に "YES" を出力します。
 # それ以外の場合は、"NO" を出力します。
 ```
+
+同値判定
+```ruby
+n = gets.to_i
+arr1 = gets.chomp.split.map &:to_i 
+arr2 = gets.chomp.split.map &:to_i 
+num = 0
+
+(0...n).each do |i|
+    if arr1[i] == arr2[i]
+        num += 1
+    end
+end
+puts num
+
+# このコードは、まず標準入力から整数 n を受け取ります。
+# 次に、n 個の整数を含む配列aとbを受け取ります。
+# そして、配列 a と b の各要素を比較し、同じ位置に同じ値がある場合にsame_countを1つ増やします。
+# 最後に、same_countの値を出力します。
+```
