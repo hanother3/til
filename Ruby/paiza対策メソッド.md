@@ -104,7 +104,7 @@ nums = Array.new(26, 0)
 ```
 
 ## splitメソッド
-文字列を指定した区切り文字で分割し、配列で返す
+文字列を指定した区切り文字で分割し、配列で返す。数値は不可。
 ```ruby
 "Tokyo:Saitama:Okinawa".split(':')
 #=> ["Tokyo", "Saitama", "Okinawa"]
