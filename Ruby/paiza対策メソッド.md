@@ -341,7 +341,7 @@ input = gets.gsub("-", "")
 ```
 
 
-## その他メソッド
+## 配列その他メソッド
 ## indexメソッド
 配列内の指定した要素の位置を取得
 ```ruby
@@ -412,9 +412,26 @@ str = "abcdaaefaagh"
 str.delete("a")
 #=> "bcdefgh"
 ```
+# 繰り返しメソッド
 
-# timesメソッド
-## 基本形
+## break
+breakはループを抜ける
+
+## return
+return はメソッドを抜ける
+```ruby
+# さらに、トップレベルで return した場合はプログラムが終了する。
+# トップレベルとは、そのファイルの一番上のスコープのこと。
+
+//ここのこと
+def hoge
+    //ここではない
+end
+//ここのこと
+```
+
+## timesメソッド
+基本形
 ```ruby
 3.times do |num|
   puts num
@@ -422,12 +439,12 @@ end
 ※num は 0から
 ```
 
-## 省略形
+省略形
 ```ruby
 3.times { |num| puts num }
 ```
 
-# timesメソッド + 配列
+## timesメソッド + 配列
 ```ruby
 # 繰り返し回数
 n = 5
@@ -440,19 +457,8 @@ n.times do
 end
 ```
 
-## returnの注意点
-```ruby
-# トップレベルで return した場合はプログラムが終了する。
-# トップレベルとは、そのファイルの一番上のスコープのこと。
-
-//ここのこと
-def hoge
-    //ここではない
-end
-//ここのこと
-```
-# eachメソッド
-## 基本形
+## eachメソッド
+基本形
 ```ruby
 nums = [1, 2, 3]
 nums.each do |i|
@@ -462,7 +468,7 @@ end
 #=> 2
 #=> 3
 ```
-## 省略形
+省略形
 ```ruby
 nums = [1, 2, 3]
 nums.each { |i| puts i }
@@ -556,7 +562,7 @@ end
 #=> 3番目のフルーツは、いちごです。
 ```
 
-# whileメソッド
+## whileメソッド
 指定した条件が真（true）の間、繰り返し処理を行う
 ```ruby
 N, K = gets.split.map &:to_i
