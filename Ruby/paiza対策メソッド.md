@@ -557,6 +557,7 @@ end
 ```
 
 # whileメソッド
+指定した条件が真（true）の間、繰り返し処理を行う
 ```ruby
 N, K = gets.split.map &:to_i
 count = 0
