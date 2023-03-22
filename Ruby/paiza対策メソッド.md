@@ -205,7 +205,10 @@ p arr.slice(0,2)
 配列の末尾に要素を追加
 ```ruby
 fruits = ["apple", "orange"]
-fruits.push("strawberry")  #fruits << "strawberry"  でも可。
+
+fruits.push("strawberry") 
+#fruits << "strawberry"  でも可。
+
 p fruits
 #=> ["apple", "orange", "strawberry"]
 ```
