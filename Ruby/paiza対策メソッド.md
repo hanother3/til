@@ -716,6 +716,24 @@ a〜zを出力
 end
 ```
 
+配列同士の掛け算（injectメソッド）
+```ruby
+arr = [1, 2, 3]
+puts arr.inject(:*)
+#=> 6
+```
+
+配列同士の掛け算（ループ）
+```ruby
+arr = [1, 2, 3]
+result = 1
+arr.each do |i|
+    result *= i
+end
+puts result
+#=> 6
+```
+
 配列の最大値、最小値
 ```ruby
 sample = [5, 8, -6, 15]
