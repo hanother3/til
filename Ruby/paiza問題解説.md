@@ -266,6 +266,52 @@ end
 # if [y, x, h].max <= l[3] は、それに高さを加えて、l[3]以下の場合かどうかを判定します。
 ```
 
+【配列 1】平面で計算
+```ruby
+n = gets.chomp.to_i
+a = Array.new(n) { Array.new(n, 0) }
+
+n.times do |i|
+  a[i] = gets.chomp.split.map(&:to_i)
+end
+
+ans = 0
+
+n.times do |i|
+  row_sum = 0
+  col_sum = 0
+
+  n.times do |j|
+    row_sum += a[i][j]
+    col_sum += a[j][i]
+  end
+
+  ans = [row_sum, col_sum, ans].max
+end
+
+left_right_down = 0
+left_right_up = 0
+
+n.times do |i|
+  left_right_down += a[i][i]
+  left_right_up += a[n - 1 - i][i]
+end
+
+ans = [left_right_down, left_right_up, ans].max
+
+puts ans
+
+# このコードは、与えられた N × N の行列を読み取り、行、列、斜め方向の和を計算し、それらの中の最大値を出力するものです。
+# 最初の3行は、N を読み取り、a という名前の N × N の2次元配列を作成します。ここで、Array.new 関数は、多次元配列を作成するために使用されます。各要素は 0 で初期化されます。
+# 次のループは、標準入力から N 行の整数を読み取り、それらを配列 a の各行に割り当てます。
+# ここでは、getsメソッドを使用して行を読み取り、chompメソッドを使用して末尾の改行文字を取り除き、splitメソッドを使用して行をスペースで区切り、各数字を整数に変換します。
+# 次のループは、ansという変数を初期化し、配列aの各行、列の和を同時に計算し、それらの最大値を、maxメソッドで ans に割り当てます。
+# そして、２つの斜め方向（左上から右下、右上から左下）の和を計算するため、left_right_down, left_right_up の変数を用意します。
+# ここでのループで、２つの斜め方向の和を同時に計算し、それらの最大値をansに割り当てます。
+# 右上から左下の和は、 left_right_up += a[n - 1 - i][i]　で、 i をマイナスしていくことで求めます。
+# 最後に、ansを出力します。
+```
+
 # データセット選択メニュー
 数値の出現率
 ```ruby
