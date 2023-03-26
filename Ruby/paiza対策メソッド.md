@@ -124,8 +124,49 @@ str = "abcdaaefaagh"
 str.delete("a")
 #=> "bcdefgh"
 ```
-# 繰り返しメソッド
 
+## a〜zを出力
+```ruby
+("a".."z").each do |i|
+    puts i
+end
+```
+
+## 文字列を大文字⇔小文字に変換
+```ruby
+str = "Hello World"
+puts str.downcase
+#=> hello world
+```
+```ruby
+str = "Hello World"
+puts str.upcase
+#=> HELLO WORLD
+```
+
+## 文字列に大文字を含むか判定する
+```ruby
+str = "Hello"
+if str =~ /[A-Z]/   #大文字があるかチェック
+    puts "YES"
+end    
+#=> YES
+```
+
+## 文字を数字(コードポイント)に変換
+```ruby
+puts 'A'.ord 
+puts 'B'.ord 
+#=> 65
+#=> 66
+```
+## 数字(コードポイント)を文字に変換
+```ruby
+puts 65.chr
+#=> A
+```
+
+# 繰り返しメソッド
 ## break
 breakはループを抜ける
 
@@ -409,13 +450,6 @@ puts range[1..3]
 #=> 4
 ```
 
-a〜zを出力
-```ruby
-("a".."z").each do |i|
-    puts i
-end
-```
-
 配列同士の掛け算（injectメソッド）
 ```ruby
 arr = [1, 2, 3]
@@ -452,40 +486,6 @@ p arr.sum.fdiv(arr.length)
 ```ruby
 n = 5
 sample = n.abs
-```
-
-文字列を大文字⇔小文字に変換
-```ruby
-str = "Hello World"
-puts str.downcase
-#=> hello world
-```
-```ruby
-str = "Hello World"
-puts str.upcase
-#=> HELLO WORLD
-```
-
-文字列に大文字を含むか判定する
-```ruby
-str = "Hello"
-if str =~ /[A-Z]/   #大文字があるかチェック
-    puts "YES"
-end    
-#=> YES
-```
-
-文字を数字(コードポイント)に変換
-```ruby
-puts 'A'.ord 
-puts 'B'.ord 
-#=> 65
-#=> 66
-```
-数字(コードポイント)を文字に変換
-```ruby
-puts 65.chr
-#=> A
 ```
 
 累乗
