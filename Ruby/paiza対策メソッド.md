@@ -123,6 +123,14 @@ p str.slice(3, 5)
 #=> "34567"
 ```
 
+## insertメソッド
+```ruby
+# 指定したインデックスに文字を挿入する
+str = "abcdefgh"
+p str.insert(2, "zzz")
+#=> "abzzzcdefgh"
+```
+
 ## delete メソッド
 ```ruby
 # 文字列から、指定の文字列を削除する
