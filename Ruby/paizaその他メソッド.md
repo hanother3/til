@@ -135,8 +135,16 @@ p str.insert(2, "zzz")
 ```ruby
 # 文字列から、指定の文字列を削除する
 str = "abcdaaefaagh"
-str.delete("a")
+p str.delete("a")
 #=> "bcdefgh"
+```
+
+## 置換メソッド
+```ruby
+str = "abcdefgh"
+str[1] = "X"
+p str
+#=> "aXcdefgh"
 ```
 
 ## indexメソッド
