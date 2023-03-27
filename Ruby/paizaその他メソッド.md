@@ -162,16 +162,23 @@ p text.index('B')
 end
 ```
 
-## 文字列を大文字⇔小文字に変換
+## 文字列を小文字に変換
 ```ruby
 str = "Hello World"
 puts str.downcase
 #=> hello world
 ```
+## 文字列を大文字に変換
 ```ruby
 str = "Hello World"
 puts str.upcase
 #=> HELLO WORLD
+```
+## 文字列を大文字・小文字それぞれに変換
+```ruby
+str = "Hello World"
+puts str.swapcase
+#=> hELLO wORLD
 ```
 
 ## 文字列に大文字を含むか判定する
