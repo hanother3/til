@@ -125,6 +125,14 @@ str.delete("a")
 #=> "bcdefgh"
 ```
 
+## indexメソッド
+```ruby
+# 文字列の文字が何文字目か検索する
+text = "ABCDEFGHI"
+p text.index('B')
+#=> 1
+```
+
 ## a〜zを出力
 ```ruby
 ("a".."z").each do |i|
