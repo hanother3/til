@@ -150,9 +150,17 @@ p str
 ## indexメソッド
 ```ruby
 # 文字列の文字が何文字目か検索する
-text = "ABCDEFGHI"
-p text.index('B')
+str = "ABCDEFGHI"
+p str.index('B')
 #=> 1
+```
+
+## include?メソッド
+```ruby
+# 文字列の中に、指定した文字列が含まれるか確かめる
+str = "ABCDEFGHI"
+p str.include?("DEF")
+#=> true
 ```
 
 ## a〜zを出力
