@@ -32,16 +32,16 @@ p arr
 "Tokyo:Saitama:Okinawa".split(':')
 #=> ["Tokyo", "Saitama", "Okinawa"]
 ```
-1バイトの空白文字も指定可。　※この場合、改行(\n)、タブ(\t)も対象となる
+デフォルト値は空白文字(半角スペース)で分割。　※この場合、改行(\n)、タブ(\t)も対象となる
 ```ruby
-" abc def g ".split(' ')
+"abc def g ".split
 #=> ["abc", "def", "g"]
 ```
-("")を使って、１文字ずつ分割する
+１文字ずつ分割する場合、("")を使う
 ```ruby
 str = "123456"
-array = str.split("")
-p array
+arr = str.split("")
+p arr
 #=> ["1", "2", "3", "4", "5", "6"]
 ```
 
