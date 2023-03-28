@@ -153,6 +153,13 @@ str[1] = "X"
 p str
 #=> "aXcdefgh"
 ```
+```ruby
+# 後ろから数える場合は、[-1]で表す
+str = "abcdefgh"
+str[-1] = "X"
+p str
+#=> "abcdefgX"
+```
 
 ## indexメソッド
 ```ruby
