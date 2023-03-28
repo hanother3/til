@@ -82,11 +82,11 @@ input = gets.chomp.to_i
 
 # 入力メソッド + 配列
 ```ruby
-# 入力値を配列に格納　　※map &:to_iで、数値に変換している　
-input = gets.split.map(&:to_i)
+# 入力値を数値に変換して、配列に格納　　※splitのデフォルトは、空白文字で分割
+input = gets.split.map &:to_i
 ```
 ```ruby
-# 分割して配列に格納　　※それぞれの変数に格納
+# 分割して配列（それぞれの変数）に格納　　※splitの引数に文字を指定することも可能。
 a,b,c = gets.split(" ").map &:to_i
 ```
 ```ruby
@@ -128,6 +128,13 @@ p str.slice(3, 5)
 ```ruby
 "Tokyo:Saitama:Okinawa".split(':')
 #=> ["Tokyo", "Saitama", "Okinawa"]
+```
+１文字ずつ分割することも可能
+```ruby
+str = "123456"
+arr = str.split("")
+p arr
+#=> ["1", "2", "3", "4", "5", "6"]
 ```
 
 ## insertメソッド
