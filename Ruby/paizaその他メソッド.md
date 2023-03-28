@@ -90,7 +90,7 @@ input = gets.split.map &:to_i
 a,b,c = gets.split(" ").map &:to_i
 ```
 ```ruby
-# 複数行の入力値を順番に格納
+# 複数行に１つずつ要素が存在する場合、順番に格納
 a = readlines.map &:to_i
 ```
 ```ruby
