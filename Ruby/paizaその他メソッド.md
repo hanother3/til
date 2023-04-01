@@ -303,6 +303,22 @@ n.times do
 end
 ```
 
+## downtoメソッド
+基本形
+```ruby
+# 初期値から1ずつ引いていき、（）の中の最小値になるまで繰り返し処理を行う
+5.downto(3) do |i|
+  puts i
+end
+#=> 5
+#=> 4
+#=> 3
+```
+省略形
+```ruby
+5.downto(3) { |i| puts i }
+```
+
 ## eachメソッド
 基本形
 ```ruby
@@ -318,9 +334,6 @@ end
 ```ruby
 nums = [1, 2, 3]
 nums.each { |i| puts i }
-#=> 1
-#=> 2
-#=> 3
 ```
 
 ## eachメソッド + 範囲
