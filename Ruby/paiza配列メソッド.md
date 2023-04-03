@@ -116,7 +116,7 @@ p arr.slice(0,2)
 
 ## 追加メソッド
 ## unshiftメソッド
-配列の先頭に要素を追加
+配列の先頭に要素を追加。破壊的メソッド。
 ```ruby
 arr = [1,2,3]
 arr.unshift(0)
@@ -125,7 +125,7 @@ p arr
 ```
 
 ## pushメソッド
-配列の末尾に要素を追加
+配列の末尾に要素を追加。破壊的メソッド。
 ```ruby
 fruits = ["apple", "orange"]
 
@@ -137,7 +137,7 @@ p fruits
 ```
 
 ## insertメソッド
-配列の指定の位置に要素を挿入する
+配列の指定の位置に要素を挿入する。破壊的メソッド。
 ```ruby
 a = [1, 2, 3]
 a.insert(1, 4)  #(挿入位置, 挿入する要素)
@@ -164,10 +164,10 @@ words.join(' ')
 ## +メソッド
 配列同士を連結する
 ```ruby
-array1 = ['a', 'b']
-array2 = ['c', 'd']
-array3 = ['e', 'f']
-array1 + array2 + array3
+arr1 = ['a', 'b']
+arr2 = ['c', 'd']
+arr3 = ['e', 'f']
+arr1 + arr2 + arr3
 => ["a", "b", "c", "d", "e", "f"]
 ```
 
@@ -198,9 +198,9 @@ puts arr.uniq.length != arr.length
 ## differenceメソッド
 ```ruby
 # 指定した配列の要素と、同じ要素を取り除いた新しい配列を返す
-ary1 = [1, 2, 3, 5, 4, 3]
-ary2 = [2, 3]
-newary = ary1.difference(ary2)
+arr1 = [1, 2, 3, 5, 4, 3]
+arr2 = [2, 3]
+newarr = arr1.difference(arr2)
 #=> [1, 5, 4]
 ```
 
@@ -234,7 +234,7 @@ p replaced # "I like travel, J-pop and baseball."
 
 ## 削除メソッド
 ## deleteメソッド
-引数と同じ要素を削除
+引数と同じ要素を削除。破壊的メソッド。
 ```ruby
 a = [1, 2, 2, 3, 3]
 a.delete(2)
@@ -243,7 +243,7 @@ print a
 ```
 
 ## delete_atメソッド
-指定位置の要素を削除
+指定位置の要素を削除。破壊的メソッド。
 ```ruby
 a = ["a", "b", "c", "d"]
 a.delete_at(2)
@@ -252,20 +252,20 @@ print a
 ```
 
 ## shiftメソッド
-先頭の要素を削除する
+先頭の要素を削除する。破壊的メソッド。
 ```ruby
-array = [1, 2, 3]
-array.shift
-p array
+arr = [1, 2, 3]
+arr.shift
+p arr
 #=> [2, 3]
 ```
 
 ## popメソッド
-末尾の要素を削除する
+末尾の要素を削除する。破壊的メソッド。
 ```ruby
-array = [1, 2, 3]
-array.pop
-p array
+arr = [1, 2, 3]
+arr.pop
+p arr
 #=> [1, 2]
 ```
 
@@ -289,8 +289,8 @@ p arr.index("banana")
 ## countメソッド
 条件に合った要素の数を数える
 ```ruby
-array = ["red","blue","yellow","red","green"]
-p array.count("red")
+arr = ["red","blue","yellow","red","green"]
+p arr.count("red")
 #=> 2
 ```
 
@@ -305,16 +305,16 @@ p num.transpose
 ## flattenメソッド
 入れ子になった配列を平坦(１次元)にする
 ```ruby
-array = [1, 2, [3, 4], 5, 6, [7, 8, 9]]
-p array.flatten
+arr = [1, 2, [3, 4], 5, 6, [7, 8, 9]]
+p arr.flatten
 #=> [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
 ## ソートメソッド
 配列内の要素を逆順に並び替える
 ```ruby
-ary = [3, 2, 1, 5, 4]
-p ary.reverse
+arr = [3, 2, 1, 5, 4]
+p arr.reverse
 #=> [4, 5, 1, 2, 3]
 ```
 
@@ -328,15 +328,15 @@ p arr
 
 昇順でソート
 ```ruby
-array = [300, 200, 150, 400, 100]
-p array.sort  #文字列も可
+arr = [300, 200, 150, 400, 100]
+p arr.sort  #文字列も可
 #=> [100, 150, 200, 300, 400]
 ```
 
 降順でソート
 ```ruby
-array = [300, 200, 150, 400, 100]
-p array.sort.reverse  #文字列も可
+arr = [300, 200, 150, 400, 100]
+p arr.sort.reverse  #文字列も可
 #=> [400, 300, 200, 150, 100]
 ```
 
