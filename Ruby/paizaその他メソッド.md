@@ -528,6 +528,25 @@ puts array
 #=> 150
 ```
 
+# Set
+## 空のセットを作成
+```ruby
+# 標準ライブラリーなので、require しないと使えない
+require 'set'
+s = Set.new
+p s
+#=> #<Set: {}>
+```
+
+## セットを作成
+```ruby
+# セットは重複する値を許さない
+require 'set'
+s = Set[3, 1, 2, 1]
+p s
+#=> #<Set: {3, 1, 2}>
+```
+
 # 計算メソッド
 
 mod
