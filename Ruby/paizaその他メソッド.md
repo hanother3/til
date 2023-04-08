@@ -443,18 +443,12 @@ puts count
 ```
 
 # ハッシュ
+空のハッシュの作成
 ```ruby
-hash = {Kyoko:"B",Rio:"O",Tsubame:"AB",KurodaSensei:"A"}	
-
-# 繰り返し処理をする場合は|key,value|で、値を取り出せる
-hash.each do |key,value|
-    puts "#{key} #{value}"
-end
-#=> Kyoko B
-#=> Rio O
-#=> Tsubame AB
-#=> KurodaSensei A
+hash = Hash.new
+# hash = {} でも可
 ```
+
 デフォルト値の設定
 ```ruby
 # 無効キーを参照したときのデフォルト値を0に変更
@@ -476,7 +470,22 @@ n.times do |i|
     puts "#{human[0]} #{human[1]}"
 end    
 ```
+
 ## ハッシュ + 繰り返し
+出力
+```ruby
+hash = {Kyoko:"B",Rio:"O",Tsubame:"AB",KurodaSensei:"A"}	
+
+# 繰り返し処理をする場合は|key,value|で、値を取り出せる
+hash.each do |key,value|
+    puts "#{key} #{value}"
+end
+#=> Kyoko B
+#=> Rio O
+#=> Tsubame AB
+#=> KurodaSensei A
+```
+
 重複加算
 ```ruby
 count = gets.to_i
