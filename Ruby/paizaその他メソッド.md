@@ -511,6 +511,14 @@ puts fruit.keys
 #=> Lemon
 #=> Orange
 ```
+
+## 特定のキーの取得
+```ruby
+fruit = {"Lemon" => 100, "Orange" => 150}
+puts fruit.key(150)
+#=> Orange
+```
+
 ## キーの存在確認
 ```ruby
 planet = { Mercury: 'emerald',　Venus: 'diamond' }
