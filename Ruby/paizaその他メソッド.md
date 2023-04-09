@@ -513,6 +513,7 @@ hash.each do |key,value|
 end
 ```
 
+## 取得メソッド
 ## すべてのキーの取得
 ```ruby
 fruit = {"Lemon" => 100, "Orange" => 150}
@@ -549,6 +550,16 @@ fruit = {"Lemon" => 100, "Orange" => 150}
 puts fruit["Lemon"]
 #=> 100
 ```
+
+## 削除メソッド
+## キーを指定した削除
+```ruby
+hash = {a:123, b:234, c:345}
+hash.delete(:b)
+p hash
+#=> {:a=>123, :c=>345}
+```
+
 
 # Set
 ## 空のセットを作成
