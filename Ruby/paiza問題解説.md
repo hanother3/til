@@ -1202,3 +1202,42 @@ end
 # 13行目：イベントが"join"の場合、名前を names に追加します。
 # 15行目：イベントが"leave"の場合、名前を names から削除します。
 ```
+
+銀行
+```ruby
+N, K = gets.chomp.split.map(&:to_i)
+data = {}
+
+N.times do
+    c, p, d = gets.chomp.split
+    data[c] = [p, d.to_i]
+end
+
+K.times do
+    g, m, w = gets.chomp.split
+    
+    pin, save = data[g]
+        if pin != m
+            next
+        end
+        
+    data[g] = [pin, save - w.to_i]
+end
+
+data.each do |name, d|
+    puts "#{name} #{d[1]}"
+end
+
+# このコードは、標準入力から与えられた情報を処理し、結果を出力するプログラムです。
+# 最初の行では、gets.chomp.split を使って標準入力から受け取った1行目を空白で分割して、それぞれ N と K に代入しています。
+# 次に、data という空のハッシュを作成します。
+# N 行の入力を受け取り、c, p, d という3つの値に分割し、それらを data にキーと値のペアとして保存します。
+# キーは c、値は [p, d.to_i] という2つの要素を持つ配列です。この処理は、N.times を使用して、N 回繰り返されます。
+# K 行の入力を受け取り、g, m, w という3つの値に分割します。
+# そして、data[g] を使って、data から g に対応する値を取得し、それらを pin と save という変数に代入します。
+# pin と m が異なる場合、next を使用して、ループの次の繰り返しに移ります。
+# pin と m が一致する場合、data[g] の値を更新するために、[pin, save - w.to_i] を使って配列を作成し、data[g] に代入します。
+# 最後に、data の各キーと値についてループを回し、それぞれの名前と貯蓄の値を出力します。
+# 具体的には、data.each を使用して、キーと値のペアに対してブロックを実行し、name と d という2つの変数に代入します。
+# それから、puts を使って、文字列と整数値をスペース区切りで表示します。
+```
