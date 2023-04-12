@@ -646,38 +646,6 @@ puts 1.23456.round(2)  #　引数で桁数を指定
 #=> 1.23
 ```
 
-配列同士の掛け算（injectメソッド）
-```ruby
-arr = [1, 2, 3]
-puts arr.inject(:*)
-#=> 6
-```
-
-配列同士の掛け算（ループ）
-```ruby
-arr = [1, 2, 3]
-result = 1
-arr.each do |i|
-    result *= i
-end
-puts result
-#=> 6
-```
-
-配列の最大値、最小値
-```ruby
-sample = [5, 8, -6, 15]
-puts sample.max (min)
-#=> 15 (5)
-```
-
-配列の平均値を取得
-```ruby
-arr = [2, 3]
-p arr.sum.fdiv(arr.length)
-#=> 2.5  #浮動小数点数の商を返す
-```
-
 絶対値取得 ※正の数の場合はそのまま、負の数の場合は符号を取り、正の数にした数値を取得
 ```ruby
 n = 5
