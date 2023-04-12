@@ -372,3 +372,36 @@ arr = [[1, 3], [1, 5], [1, 2], [2, 4], [2, 2]]
 p arr.sort {|a,b| a[1] <=> b[1]}
 #=> [[1, 2], [2, 2], [1, 3], [2, 4], [1, 5]]
 ```
+
+## 計算メソッド
+配列同士の掛け算（injectメソッド）
+```ruby
+arr = [1, 2, 3]
+puts arr.inject(:*)
+#=> 6
+```
+
+配列同士の掛け算（ループ）
+```ruby
+arr = [1, 2, 3]
+result = 1
+arr.each do |i|
+    result *= i
+end
+puts result
+#=> 6
+```
+
+配列の最大値、最小値
+```ruby
+sample = [5, 8, -6, 15]
+puts sample.max (min)
+#=> 15 (5)
+```
+
+配列の平均値を取得
+```ruby
+arr = [2, 3]
+p arr.sum.fdiv(arr.length)
+#=> 2.5  #浮動小数点数の商を返す
+```
