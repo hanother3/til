@@ -35,7 +35,15 @@ p (1..10).to_a
 # ハッシュを配列化する
 human = {name: "kawata"}
 p human.to_a
-=> [[:name, "kawata"]]
+#=> [[:name, "kawata"]]
+```
+
+to_hメソッド
+```ruby
+# 二次元配列をハッシュに変換する
+human = [["name", "kawata"]]
+p human.to_h
+#=> {"name"=>"kawata"}
 ```
 
 ## splitメソッド
