@@ -1241,3 +1241,34 @@ end
 # 具体的には、data.each を使用して、キーと値のペアに対してブロックを実行し、name と d という2つの変数に代入します。
 # それから、puts を使って、文字列と整数値をスペース区切りで表示します。
 ```
+
+経理
+```ruby
+n, k = gets.chomp.split.map(&:to_i)
+departments = Hash.new { |h, k| h[k] = [] }
+n.times { departments[gets.chomp] }
+
+k.times do
+  a, p, m = gets.chomp.split
+  departments[a] << [p, m]
+end
+
+departments.each do |key, val|
+  puts key
+  val.each do |p, m|
+    puts "#{p} #{m}"
+  end
+  puts "-----"
+end
+
+# このコードは、各部署の注文番号と、領収書の金額を出力するコードです。
+# 標準入力から 部署の数 n と 領収書の枚数 k を受け取ります。
+# n 回ループを実行し、各部署の名前を departments ハッシュのキーとして受け取ります。
+# k 回ループを実行し、各部署名 a、注文番号 p、領収書の金額 m を受け取ります。
+# departments ハッシュには、各部署名 a に対して、配列 [(p1, m1), (p2, m2), ...] が追加されます。
+# departments ハッシュの各要素について、部署名と注文番号と金額を出力します。最後に ----- を表示して、部署ごとに区切ります。
+# なお、Hash.new { |h, k| h[k] = [] } は、デフォルト値が空の配列であるハッシュを生成するためのものです。
+# ここでは、ブロック引数 h は作成されたハッシュ自体を示し、k はハッシュに存在しないキーの名前を示します。
+# つまり、新しいキーが departments ハッシュに追加されるたびに、そのキーに対応する値として空の配列が設定されます。
+
+```
