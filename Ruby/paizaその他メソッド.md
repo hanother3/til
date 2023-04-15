@@ -471,8 +471,7 @@ n.times do |i|
 end    
 ```
 
-## ハッシュ + 繰り返し
-出力
+## 出力
 ```ruby
 hash = {Kyoko:"B",Rio:"O",Tsubame:"AB",KurodaSensei:"A"}	
 
@@ -529,6 +528,23 @@ end
 #=> A ["0000", 9800]
 #=> B ["1234", 22456]
 #=> C ["5678", 8765]
+```
+
+## ハッシュ + 配列（配列を追加）
+```ruby
+n, k = gets.chomp.split.map(&:to_i)
+
+# hash[key]の入力をした場合、空の配列を作成する
+hash = Hash.new { |hash, key| hash[key] = [] }
+
+# 入力から、hash[key]を受け取る
+n.times { hash[gets.chomp] }
+
+k.times do
+  a, p, m = gets.chomp.split
+  # hash[a]に、配列を追加する
+  hash[a] << [p, m]
+end
 ```
 
 ## 取得メソッド
